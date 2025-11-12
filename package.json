@@ -2,13 +2,17 @@
   "name": "student-marks-backend",
   "version": "1.0.0",
   "type": "module",
+  "main": "src/server.js",
   "scripts": {
     "dev": "node --watch src/server.js",
+    "dev:nodemon": "nodemon src/server.js",
     "start": "node src/server.js",
     "test": "NODE_OPTIONS=--experimental-vm-modules jest",
-    "seed": "node scripts/seed.js"
+    "seed": "node scripts/seed.js",
+    "build": "echo \"No build step for backend\""
   },
   "dependencies": {
+    "@supabase/functions-js": "^2.81.1",
     "@supabase/supabase-js": "^2.81.1",
     "bcrypt": "^5.1.1",
     "cors": "^2.8.5",
@@ -22,20 +26,5 @@
     "@jest/globals": "^29.7.0",
     "jest": "^29.7.0",
     "supertest": "^6.3.4"
-  }
-}
-{
-  "name": "student-portal-backend",
-  "version": "1.0.0",
-  "main": "server.js",
-  "scripts": {
-    "start": "node server.js",
-    "dev": "nodemon server.js",
-    "build": "echo \"No build step for backend\""
-  },
-  "dependencies": {
-    "express": "^4.18.2",
-    "@supabase/supabase-js": "^2.0.0",
-    "bcrypt": "^5.1.0"
   }
 }
